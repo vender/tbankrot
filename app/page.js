@@ -2,7 +2,7 @@ import Mainpage from "#/components/mainPage";
 
 export default async function Home() {
 
-  const res = await fetch('http://localhost:3000/api/getData', {
+  const res = await fetch('/api/getData', {
     headers: {
       'Content-Type': 'application/json',
     },

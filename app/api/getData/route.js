@@ -24,10 +24,14 @@ export async function GET() {
         const resultsSelector = '.layer > .content .torg:not(.lot)';
         await page.waitForSelector(resultsSelector);
 
-        const debitorList = await page.$$(resultsSelector);
-        debitorList.map((item,idx)=> {
-          console.log(item);
-        });
+        // const debitorList = await page.$$('.debtor');
+        // debitorList.map(async (item,idx)=> {
+        //   // await item.waitForSelector('a');
+        //   const debitorLink = await item.$$('a');
+        //   // debitorLink && debitorLink.click();
+        //   // console.log(debitorLink && debitorLink.textContent);
+        //   console.log(item && item.asElement());
+        // });
 
         // Extract the results from the page.
         const links = await page.evaluate(resultsSelector => {
