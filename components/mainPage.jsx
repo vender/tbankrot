@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
 
 export default function Mainpage({ data }) {
-
+    
     return (
         <Container className="p-3">
             <h1 className="mb-5">Электронные торги по банкротству</h1>

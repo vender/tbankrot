@@ -7,7 +7,7 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'files.tbankrot.ru',
             port: '',
-            pathname: '/etpPhoto/**',
+            pathname: '/**',
           },
         ],
     },

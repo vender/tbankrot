@@ -1,11 +1,15 @@
 import Mainpage from "#/components/mainPage"; 
 
-export default async function Home() {
+export const checkEnvironment = () => {
+  return process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : "https://3cdev.ru";
+};
 
-  const res = await fetch('/api/getData', {
-    headers: {
-      'Content-Type': 'application/json',
-    },
+export default async function Home() {
+  console.log(checkEnvironment().concat('/api/getData'));
+  const res = await fetch(checkEnvironment().concat('/api/getData'), {
+    method: 'GET',
     next: { revalidate: 60 }
   })
   const data = await res.json()
