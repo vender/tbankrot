@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
+    output: 'export',
     images: {
         remotePatterns: [
           {
             protocol: 'https',
-            hostname: 'files.tbankrot.ru',
-            port: '',
-            pathname: '/**',
+            hostname: '**.tbankrot.ru/**',
           },
         ],
     },

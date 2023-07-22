@@ -7,8 +7,8 @@ export const checkEnvironment = () => {
 };
 
 export default async function Home() {
-  console.log(checkEnvironment().concat('/api/getData'));
-  const res = await fetch(checkEnvironment().concat('/api/getData'), {
+  // const res = await fetch(checkEnvironment().concat('/api/getData'), {
+  const res = await fetch('http://localhost:3000/api/getData', {
     method: 'GET',
     next: { revalidate: 60 }
   })
